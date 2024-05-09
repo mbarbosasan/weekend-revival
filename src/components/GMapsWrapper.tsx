@@ -68,8 +68,8 @@ export const GMapsWrapper = ({lat, lng}: {lat: number, lng: number}) => {
     return isLoaded ? (
         <GoogleMap
             mapContainerStyle={{
-                height: "70%",
-                width: "90%",
+                height: "100%",
+                width: "100%",
                 borderRadius: "20px"
             }}
             onLoad={onLoad}

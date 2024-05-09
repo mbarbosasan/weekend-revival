@@ -5,8 +5,8 @@ import {Button} from '@/components/ui/button.tsx'
 import {GMapsWrapper} from '@/components/GMapsWrapper.tsx'
 ---
 
-<main class="w-[90vw] h-[90vh] flex items-center flex-wrap">
-    <div class="w-full md:w-1/2 px-3">
+<main class="w-screen h-screen flex items-center justify-center flex-wrap px-3">
+    <div class="w-full h-3/5 flex items-start justify-center flex-col md:w-1/2 md:h-full md:pr-2">
         <HeroUserCity client:load />
         <p class="text-sm text-gray-600 font-body mb-4">
             Acompanhe todos a programação dos bares e restaurantes que estão acontecendo perto de você,
@@ -14,7 +14,7 @@ import {GMapsWrapper} from '@/components/GMapsWrapper.tsx'
         </p>
         <Button class="font-display font-bold">Saiba mais!</Button>
     </div>
-    <div class="w-full md:w-1/2 h-full flex items-center justify-center">
+    <div class="w-full md:w-2/5 md:h-[80%] h-[400px] flex items-center justify-center md:pl-2">
         <GMapsWrapper lat={-3.7172} lng={-38.5438} client:load />
     </div>
-</main>
+</main>`
