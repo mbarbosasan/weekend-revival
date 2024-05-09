@@ -1,0 +1,20 @@
+---
+
+import {HeroUserCity} from '../components/HeroUserCity.tsx'
+import {Button} from '@/components/ui/button.tsx'
+import {GMapsWrapper} from '@/components/GMapsWrapper.tsx'
+---
+
+<main class="w-[90vw] h-[90vh] flex items-center flex-wrap">
+    <div class="w-full md:w-1/2 px-3">
+        <HeroUserCity client:load />
+        <p class="text-sm text-gray-600 font-body mb-4">
+            Acompanhe todos a programação dos bares e restaurantes que estão acontecendo perto de você,
+            tenha acesso ao cardápio, preço, estacionamento e tudo que você precisa para decidir para onde ir hoje a noite!
+        </p>
+        <Button class="font-display font-bold">Saiba mais!</Button>
+    </div>
+    <div class="w-full md:w-1/2 h-full flex items-center justify-center">
+        <GMapsWrapper lat={-3.7172} lng={-38.5438} client:load />
+    </div>
+</main>
