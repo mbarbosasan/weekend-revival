@@ -2,12 +2,12 @@ import {useEffect, useState} from "react";
 import {Skeleton} from "@/components/ui/skeleton.tsx";
 
 
-export const HeroUserCity = ({lat, lng}: {lat: number, lng: number}) => {
+export const HeroUserCity = () => {
     const [geolocation, setGeolocation] = useState({
         cidade: 'Fortaleza',
         pais: 'Brasil',
-        lat,
-        lng
+        lat: -3.71722,
+        lng: -38.54306
     })
 
     const [loading, setLoading] = useState(false)
