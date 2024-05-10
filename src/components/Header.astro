@@ -3,18 +3,18 @@ import { ModeToggle } from '@/components/ModeToggle'
 import { Button } from '@/components/ui/button'
 ---
 
-<header class="flex justify-between items-center p-3 shadow-2xl border-b">
-    <p>Weekend</p>
+<header class="flex justify-between items-center p-3 shadow-2xl border-b fixed z-[4] dark:bg-secondary bg-primary w-full">
+    <p class="dark:text-primary text-white">Weekend</p>
     <nav>
         <ul class="flex items-center gap-3">
             <li>
-                <Button variant={'link'}>Home</Button>
+                <Button variant={'link'} className="dark:text-primary text-white">Início</Button>
             </li>
             <li>
-                <Button variant={'link'}>Sobre</Button>
+                <Button variant={'link'} className="dark:text-primary text-white">Sobre</Button>
             </li>
             <li>
-                <Button variant={'link'}>Contato</Button>
+                <Button variant={'link'} className="dark:text-primary text-white">Contato</Button>
             </li>
         </ul>
     </nav>

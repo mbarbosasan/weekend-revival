@@ -1,0 +1,31 @@
+---
+import { Button } from '@/components/ui/button'
+---
+
+<footer class="w-full h-1/5 flex items-center justify-around dark:bg-secondary bg-primary shadow-2xl border-t mt-5">
+    <div>
+        <p class="text-2xl dark:text-primary text-white">Weekend</p>
+    </div>
+    <ul>
+        <li>
+            <Button variant={'link'} className="dark:text-primary text-white">Home</Button>
+        </li>
+        <li>
+            <Button variant={'link'} className="dark:text-primary text-white">Sobre</Button>
+        </li>
+        <li>
+            <Button variant={'link'} className="dark:text-primary text-white">Contato</Button>
+        </li>
+    </ul>
+    <div class="flex flex-col items-center">
+        <p class="text-gray-600 text-sm dark:text-primary text-white">Contato</p>
+        <ul>
+            <li>
+                <Button variant={'link'} className="dark:text-primary text-white">Instagram</Button>
+            </li>
+            <li>
+                <Button variant={'link'} className="dark:text-primary text-white">Email</Button>
+            </li>
+        </ul>
+    </div>
+</footer>
