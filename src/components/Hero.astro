@@ -5,7 +5,7 @@ import {Button} from '@/components/ui/button.tsx'
 import {GMapsWrapper} from '@/components/GMapsWrapper.tsx'
 ---
 
-<main class="w-screen h-[95vh] flex items-center justify-center flex-wrap p-3">
+<main class="w-screen h-[95vh] flex items-center justify-around flex-wrap p-3">
     <div class="w-full h-1/2 flex items-start justify-center flex-col md:w-1/2 md:h-min md:pr-2">
         <HeroUserCity client:load />
         <p class="text-sm text-gray-600 font-body mb-4">
@@ -14,7 +14,7 @@ import {GMapsWrapper} from '@/components/GMapsWrapper.tsx'
         </p>
         <Button className="font-bold">Saiba mais!</Button>
     </div>
-    <div class="w-full md:w-2/5 md:h-[60%] h-1/2 flex items-center justify-center md:pl-2">
+    <div class="w-full md:w-2/5 md:h-[80%] h-1/2 flex items-center justify-center md:pl-2">
         <GMapsWrapper lat={-3.7172} lng={-38.5438} client:load />
     </div>
 </main>

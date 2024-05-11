@@ -1,0 +1,91 @@
+---
+import { IconWrapper } from "@/components/IconWrapper"
+import { RollerCoaster, TicketCheck, Car, MicVocal } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+const evento = {
+    titulo: 'Emo/Rock/Alt/Pop 2000s',
+    descricao: 'Venha relembrar os maiores sucessos do Emo, Rock, Alt e Pop dos anos 2000s. Vai rolar Blink 182, My Chemical Romance, Paramore, Panic! At The Disco, Fall Out',
+    estabelecimento: {
+        nome: 'Barzin',
+        endereco: {
+            bairro: 'Floresta',
+        },
+        iconPath: 'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80',
+        estrutura: {
+            estacionamento: true,
+            couvert: true,
+            espacoCrianca: true
+        }
+    },
+    ingressoRequerido: true,
+    banner: 'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80',
+    dia: {
+        dia: 1,
+        data: 10,
+        mes: 10,
+        horaInicio: '19:00',
+        horaFim: '20:00'
+    },
+    tags: ['Emo', 'Rock', 'Alt', 'Pop', '2000s']
+}
+---
+<section class="w-full h-fit md:h-screen flex flex-wrap items-center my-4">
+  <div class="w-full md:w-1/2">    
+    <Card className="mx-3 mb-3 border-primary dark:border-secondary">
+      <CardContent>
+        <article>
+          <div class="flex items-center py-3">
+            <h2 class="text-center font-bold my-3 ml-auto">{evento.titulo}</h2>
+            <div class="ml-auto flex flex-col items-center text-right">
+                <p class="text-primary text-sm text-right w-full">{evento.dia.horaInicio}</p>
+                <div class="flex items-center">
+                    <p class="text-right w-full text-sm">
+                        <span class="font-bold tracking-widest">{evento.dia.dia}</span>
+                        , dia {evento.dia.data}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src={evento.banner} alt="Banner do evento" class="w-full h-96 object-cover rounded-lg" />
+        <div class="my-3 flex justify-between items-center flex-wrap sm:flex-nowrap">
+          <div class="flex items-center gap-2">
+              <img src={evento.estabelecimento.iconPath} width="60" height="60"
+                   class="w-[60px] h-[60px] rounded-full"/>
+              <div>
+                  <p>{evento.estabelecimento.nome}</p>
+                  <p>{evento.estabelecimento.endereco.bairro}</p>
+              </div>
+          </div>
+          <div class="flex items-center flex-wrap justify-start gap-2 mt-2 sm:mt-0">
+              {evento.ingressoRequerido && (<IconWrapper label={"Ingresso"}>
+                  <TicketCheck size={24} className="text-primary"/>
+              </IconWrapper>)}
+              {evento.estabelecimento.estrutura.estacionamento && (<IconWrapper label={"Estacionamento"}>
+                  <Car size={24} className="text-primary"/>
+              </IconWrapper>)}
+              {evento.estabelecimento.estrutura.couvert && (<IconWrapper label={"Couvert"}>
+                  <MicVocal size={24} className="text-primary"/>
+              </IconWrapper>)}
+              {evento.estabelecimento.estrutura.espacoCrianca && (<IconWrapper label={"Espaço Kids"}>
+                  <RollerCoaster size={24} className="text-primary"/>
+              </IconWrapper>)}
+          </div>
+      </div>
+      <p class="my-3">{evento.descricao}</p>
+      <div class="flex gap-2 items-center">
+          {evento.tags.map(tag => (<Badge>#{tag}</Badge>))}
+      </div>
+        </article>
+      </CardContent>
+    </Card>
+  </div>
+  <div class="w-full mx-4 md:w-1/2 md:mx-0">
+    <p class="text-sky-500 uppercase tracking-widest">COMO FUNCIONA</p>
+    <h2 class="text-4xl text-primary mb-4">Esteja por dentro de tudo que está acontecendo em sua cidade</h2>
+    <p class="text-gray-600">
+      Tá dificil ficar por dentro dos melhores rolês e locais para se divertir com a galera?
+      Não achou aquele lugar top para marcar o date de hoje? Ainda em dúvida de onde ir com a família comemorar os 90ão da vovó?
+    </p>
+  </div>
+</section>
