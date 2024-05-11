@@ -35,7 +35,9 @@ export const HeroUserCity = () => {
         navigator.geolocation.getCurrentPosition(async (position) => {
             const {latitude, longitude} = position.coords
             const cityData = await getCityFromLatLng(latitude, longitude)
-            if (!cityData) return setLoading(false);
+            console.log(cityData)
+            setLoading(false)
+            if (!cityData) return;
             setGeolocation(cityData)
         }, (error) => {
             setLoading(false)

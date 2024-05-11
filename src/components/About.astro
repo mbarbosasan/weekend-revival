@@ -1,0 +1,63 @@
+---
+import { CalendarCheck, Utensils, Car } from 'lucide-react';
+---
+
+<section class="md:h-[80vh] h-min w-full flex justify-center items-center flex-wrap px-4 gap-3">
+  <div class="flex flex-col items-start justify-center w-full md:h-full sm:w-2/5">
+    <p class="text-sky-500 uppercase tracking-widest">COMO FUNCIONA</p>
+    <h2 class="text-4xl text-primary mb-4">Esteja por dentro de tudo que está acontecendo em sua cidade</h2>
+    <p class="text-gray-600">
+      Tá dificil ficar por dentro dos melhores rolês e locais para se divertir com a galera?
+      Não achou aquele lugar top para marcar o date de hoje? Ainda em dúvida de onde ir com a família comemorar os 90ão da vovó?
+    </p>
+  </div>
+  <div class="w-full h-1/2 md:w-1/2 md:h-full">
+    <ul class="flex flex-col justify-around h-full gap-11 mt-11">
+      <li class="flex items-center">
+          <div class="flex items-center">
+              <div
+                  class=" w-[60px]">
+                  <CalendarCheck size={36} className="text-center"/>
+              </div>
+          </div>
+          <div>
+              <p class="text-3xl text-primary text-start">Programação</p>
+              <p class="md:text-base text-gray-600">
+                  Tenha acesso a programação de vários bares na palma sua mão e não perca mais tempo tendo
+                  que olhar cada instagram, juntamos todos em único local para você!
+              </p>
+          </div>
+      </li>
+      <li class="flex items-center">
+          <div class="flex items-center">
+              <div
+                  class=" w-[60px]">
+                  <Utensils size={36} className="text-center"/>
+              </div>
+          </div>
+          <div>
+              <p class="text-3xl text-primary text-start">Cardápio</p>
+              <p class="md:text-base text-gray-600">
+                  Consulte o cardápio dos estabelecimentos e veja o que eles tem a oferecer, desde pratos
+                  principais as sobremesas e drinks, tudo isso antes mesmo de sair de casa.
+              </p>
+          </div>
+      </li>
+      <li class="flex items-center">
+          <div class="flex items-center">
+              <div
+                  class="w-[60px]">
+                  <Car size={36} className="text-center"/>
+              </div>
+          </div>
+          <div>
+              <p class="text-3xl text-primary text-start">Estacionamento</p>
+              <p class="md:text-base text-gray-600">
+                  Não quer ter dor de cabeça com estacionamento? Consulte se o local possui estacionamento
+                  próprio e evite surpresas, além de saber se é gratuito ou pago.
+              </p>
+          </div>
+      </li>
+  </ul>
+  </div>
+</section>
